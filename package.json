@@ -1,0 +1,34 @@
+{
+  "name": "typescript-data-structures",
+  "version": "0.0.0",
+  "main": "./dist/index.js",
+  "repository": "https://github.com/jtmthf/typescript-data-structures.git",
+  "author": "Jack Moore <jtmthf@mst.edu>",
+  "license": "MIT",
+  "scripts": {
+    "precommit": "lint-staged",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "lint-staged": {
+    ".{js,json,ts,md}": ["prettier --write", "git add"]
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "/__tests__/.*\\.(ts|js)$",
+    "moduleFileExtensions": ["ts", "js", "json", "node"]
+  },
+  "devDependencies": {
+    "@types/jest": "^22.0.1",
+    "husky": "^0.14.3",
+    "jest": "^22.1.1",
+    "lint-staged": "^6.0.0",
+    "prettier": "^1.10.2",
+    "ts-jest": "^22.0.1",
+    "tslint": "^5.9.1",
+    "tslint-config-prettier": "^1.6.0",
+    "typescript": "^2.6.2"
+  }
+}
